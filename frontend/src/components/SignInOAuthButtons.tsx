@@ -36,13 +36,20 @@ const SignInOAuthButtons = () => {
       `${window.location.origin}/auth-callback`
     );
 
-    window.location.href =
+    const authUrl =
       `${domain}/oauth2/authorize` +
       `?identity_provider=Google` +
       `&response_type=code` +
       `&client_id=${clientId}` +
       `&redirect_uri=${redirectUri}` +
       `&scope=openid+email+profile`;
+
+      console.log(redirectUri);
+      console.log("Cognito Auth URL:", authUrl);
+
+      setTimeout(() => {
+        window.location.href = authUrl;
+      }, 3000);
   };
 
   return (

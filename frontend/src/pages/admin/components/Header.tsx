@@ -1,4 +1,4 @@
-import { UserButton } from "@clerk/clerk-react";
+// import { UserButton } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
 					<p className='text-zinc-400 mt-1'>Manage your music catalog</p>
 				</div>
 			</div>
-			<UserButton />
+			{/* <UserButton /> */}
 		</div>
 	);
 };

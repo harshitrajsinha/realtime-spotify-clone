@@ -1,21 +1,21 @@
-import PlaylistSkeleton from "@/components/skeletons/PlaylistSkeleton";
+// import PlaylistSkeleton from "@/components/skeletons/PlaylistSkeleton";
 import { buttonVariants } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
+// import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
-import { useMusicStore } from "@/stores/useMusicStore";
-import { SignedIn } from "@clerk/clerk-react";
+// import { useMusicStore } from "@/stores/useMusicStore";
+// import { SignedIn } from "@clerk/clerk-react";
 import { HomeIcon, Library, MessageCircle } from "lucide-react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const LeftSidebar = () => {
-	const { albums, fetchAlbums, isLoading } = useMusicStore();
+	// const { albums, fetchAlbums, isLoading } = useMusicStore();
 
-	useEffect(() => {
-		fetchAlbums();
-	}, [fetchAlbums]);
+	// useEffect(() => {
+	// 	fetchAlbums();
+	// }, [fetchAlbums]);
 
-	console.log({ albums });
+	// console.log({ albums });
 
 	return (
 		<div className='h-full flex flex-col gap-2'>
@@ -36,7 +36,7 @@ const LeftSidebar = () => {
 						<span className='hidden md:inline'>Home</span>
 					</Link>
 
-					<SignedIn>
+					{/* <SignedIn>
 						<Link
 							to={"/chat"}
 							className={cn(
@@ -49,7 +49,7 @@ const LeftSidebar = () => {
 							<MessageCircle className='mr-2 size-5' />
 							<span className='hidden md:inline'>Messages</span>
 						</Link>
-					</SignedIn>
+					</SignedIn> */}
 				</div>
 			</div>
 
@@ -62,7 +62,7 @@ const LeftSidebar = () => {
 					</div>
 				</div>
 
-				<ScrollArea className='h-[calc(100vh-300px)]'>
+				{/* <ScrollArea className='h-[calc(100vh-300px)]'>
 					<div className='space-y-2'>
 						{isLoading ? (
 							<PlaylistSkeleton />
@@ -87,7 +87,7 @@ const LeftSidebar = () => {
 							))
 						)}
 					</div>
-				</ScrollArea>
+				</ScrollArea> */}
 			</div>
 		</div>
 	);
