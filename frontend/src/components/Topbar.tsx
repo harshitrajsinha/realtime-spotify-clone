@@ -36,9 +36,9 @@ const Topbar = () => {
 						<SignInOAuthButtons />
 					)}
 
-					{!isLoading && isAuthenticated && (
+					{/* {!isLoading && isAuthenticated && ( */}
 						<SignOutButton />
-					)}
+					{/* )} */}
 				{/* </SignedOut> */}
 
 				{/* <UserButton /> */}
